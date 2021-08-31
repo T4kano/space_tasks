@@ -14,6 +14,18 @@
     padding: 0;
     background-image: url(../public/img/pc.png);
   }
+
+  .inputs {
+    display: flex;
+  }
+
+  div.mr {
+    margin-right: 1rem;
+  }
+
+  .group {
+    margin-right: 1rem;
+  }
 }
 
 .form {
@@ -58,30 +70,28 @@
   outline: none;
 }
 
-.inputs {
-  display: flex;
-  justify-content: space-between;
-}
 
-.input {
+.group {
   display: flex;
 }
 
-.input input[type="checkbox"] {
+.inputs input[type="checkbox"] {
   height: 40px;
   margin: 0;
 }
 
-.input input[type="checkbox"]:focus {
+.inputs input[type="checkbox"]:focus {
   outline: none;
+  box-shadow: none;
 }
 
-.inputs div {
-  flex: 1;
-}
-
-div.m {
+.data {
   margin-right: 1rem;
+  width: 100%;
+}
+
+.inputs div.full {
+  width: 100%;
 }
 
 .btn {

@@ -9,15 +9,15 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  let { name, phone, area, date, urgency, message, activity } = req.body
+  let { name, phone, area, date, urgency, comment, activity } = req.body
   const database = await notion.databases.query({
     database_id: process.env.DATABASE_ID || ''
   })
 
+  console.log(urgency);
+
   const ticket = String(database.results.length + 1)
   let status = urgency == true ? 'Aguardando validação' : 'Pra fazer'
-
-  console.log(date)
 
   if(date == '') {
     date = new Date();
@@ -73,7 +73,7 @@ export default async function handler(
           {
             type: 'text',
             text: {
-              content: message
+              content: comment
             }
           }
         ]
