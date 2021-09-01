@@ -14,8 +14,6 @@ export default async function handler(
     database_id: process.env.DATABASE_ID || ''
   })
 
-  console.log(urgency);
-
   const ticket = String(database.results.length + 1)
   let status = urgency == true ? 'Aguardando validação' : 'Pra fazer'
 
@@ -27,6 +25,11 @@ export default async function handler(
     if(day.toString().length == 1) day = `0${day}`
     if(month.toString().length == 1) month = `0${month}`
     date = `${year}-${month}-${day}`
+  }
+
+  if(activity == '' || activity == 'Selecione...') {
+    res.status(500).json({ message: 'Ops, algo deu errado!' })
+    return
   }
 
   await notion.pages.create({
@@ -135,7 +138,7 @@ export default async function handler(
       },
     }
   }).then(() => {
-    res.status(201).json({ message: 'Sucesso!' })
+    res.status(201).json(ticket)
   }).catch((error) => {
     console.log(`${error}\n${date}`)
     res.status(500).json({ message: 'Ops, algo deu errado!' })
