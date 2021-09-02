@@ -153,7 +153,7 @@ export default function Home() {
                   />
                 </div>
                 <div className={styles.checkbox}>
-                  <label htmlFor="urgency">Urgênte?</label>
+                  <label htmlFor="urgency">Urgente?</label>
                   <input
                     type="checkbox"
                     id="urgency"
