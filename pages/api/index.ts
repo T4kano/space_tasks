@@ -120,14 +120,6 @@ export default async function handler(
           }
         ]
       },
-      'Responsáveis': {
-        type: 'multi_select',
-        multi_select: [
-          {
-            name: 'Gute'
-          }
-        ]
-      },
       'Atividade': {
         type: 'multi_select',
         multi_select: [
