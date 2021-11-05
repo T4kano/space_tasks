@@ -110,7 +110,7 @@ export default function Home() {
                   id="name"
                   name="name"
                   placeholder="Seu nome"
-                  value={data.name}
+                  //value={data.name}
                   onChange={handleChange}
                   required
                 />
@@ -122,7 +122,7 @@ export default function Home() {
                   name="phone"
                   id="phone"
                   placeholder="(19) 99999-9999"
-                  value={data.phone}
+                  //value={data.phone}
                   onChange={handleChange}
                   required
                 />
@@ -134,7 +134,7 @@ export default function Home() {
                   name="area"
                   id="area"
                   placeholder="Área de atuação"
-                  value={data.area}
+                  //value={data.area}
                   onChange={handleChange}
                   required
                 />
@@ -148,7 +148,7 @@ export default function Home() {
                     type="date"
                     id="date"
                     name="date"
-                    value={data.date}
+                    //value={data.date}
                     onChange={handleChange}
                   />
                 </div>
@@ -165,7 +165,7 @@ export default function Home() {
               </div>
               <div className={styles.full}>
                 <label htmlFor="activity">Atividade</label>
-                <select id="ctivity" name="activity" onChange={handleChange} value={data.activity}>
+                <select id="ctivity" name="activity" onChange={handleChange} /*value={data.activity}*/>
                   <option>Selecione...</option>
                   <option>Edição</option>
                   <option>Fotografia</option>
@@ -197,7 +197,7 @@ export default function Home() {
                 name="comment"
                 id="comment"
                 placeholder="Descreva a atividade..."
-                value={data.comment}
+                //value={data.comment}
                 onChange={handleChange}
                 rows={5}
                 required
