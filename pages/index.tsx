@@ -187,6 +187,7 @@ export default function Home() {
                   <option>Diário Consult</option>
                   <option>Cobrança/Validação</option>
                   <option>Suporte</option>
+                  <option>Suporte TI</option>
                   <option>Spotify</option>
                 </select>
               </div>
